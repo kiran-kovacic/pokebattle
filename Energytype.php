@@ -2,13 +2,10 @@
 
 class Energytype
 {
-  public $energyTypes;
-  public $weakness;
-  public $resistance;
-}
+    public $Type;
 
-// public function Weakness()
-// {
-//
-//   // $this-> = $;
-// }
+    public function __construct($Type)
+    {
+        $this->Type = $Type;
+    }
+}

@@ -1,0 +1,57 @@
+main {
+  padding-left: 20%;
+  padding-right: 20%;
+  display: flex;
+  align-items: flex-end;
+}
+
+section {
+  flex-basis: 50%;
+}
+
+div {
+  width: 50px;
+}
+
+img {
+  width: 50%;
+}
+
+.bottom {
+  height: 2%;
+  width: 50%;
+  background-color: lightgray;
+  border: ;
+}
+
+#top1 {
+  position: relative;
+  top: 20%;
+  left: 2%;
+  height: 60%;
+  width: 96%;
+  background-color: darkred;
+}
+
+#top2 {
+  position: relative;
+  top: 20%;
+  left: 2%;
+  height: 60%;
+  width: 96%;
+  background-color: darkred;
+}
+
+button {
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+}

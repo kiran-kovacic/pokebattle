@@ -2,12 +2,12 @@
 
 class Resistance
 {
-  public $resistance;
-  public $reduce;
+  public $Resistance;
+  public $Reduce;
 
-  public function __construct($resistance, $reduce)
+  public function __construct($Resistance, $Reduce)
   {
-    $this->resistance = $resistance;
-    $this->reduce = $reduce;
+    $this->Resistance = $Resistance;
+    $this->Reduce = $Reduce;
   }
 }
