@@ -2,12 +2,12 @@
 
 class Weakness
 {
-  public $Weaknesses;
-  public $Multiplier;
+  public $name;
+  public $multiplier;
 
-  public function __construct($Weakness, $Multiplier)
+  public function __construct($name, $multiplier)
   {
-    $this->Weakness = $Weakness;
-    $this->Multiplier = $Multiplier;
+    $this->name = $name;
+    $this->multiplier = $multiplier;
   }
 }

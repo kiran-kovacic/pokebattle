@@ -5,25 +5,30 @@ class Charmeleon extends Pokemon
 
   public $specie = 'Charmeleon';
   public $hitpoints = 60;
-  public $Move1;
-  public $Move2;
+  public $move1;
+  public $move2;
   public $fire;
-  public $Weakness;
+  public $weakness;
   public $resistance;
 
   public function __construct($name, $currentHealth)
   {
-      $this->Weakness = new Weakness(
+      $this->weakness = new Weakness(
         'water',
         2
     );
-    $this->Resistance = new Resistance(
+    $this->resistance = new Resistance(
         'lighting',
         10
     );
-      $this->Move1 = new Moves('Head Butt', 10);
-      $this->Move2 = new Moves('Flare', 30);
+      $this->move1 = new Moves('Head Butt', 10);
+      $this->move2 = new Moves('Flare', 30);
       $this->fire = new Energytype('fire');
-    parent::__construct($name, $this->specie, $this->fire, $this->hitpoints, $currentHealth, $this->weakness, $this->resistance, $this->Move1 , $this->Move2);
+    parent::__construct($name, $this->specie, $this->fire, $this->hitpoints, $currentHealth, $this->weakness, $this->resistance, $this->move1 , $this->move2);
+  }
+
+  public function damageCalculation($damage, $specie)
+  {
+
   }
 }

@@ -19,27 +19,14 @@ $charmeleon = new Charmeleon(
   'melon',
   60
 );
-
-// echo $pikachu->name . '<br/>';
-// echo $pikachu->specie . '<br/>';
-// echo $pikachu->energytype . '<br/>';
-// echo $pikachu->hitpoints . '<br/>';
-// echo $pikachu->currentHealth . '<br/>';
-// echo $pikachu->resistance->Resistance . '<br/>';
-// echo $pikachu->weakness->Weakness . '<br/><br/>';
-//
-//
-// echo $charmeleon->name . '<br/>';
-// echo $charmeleon->specie . '<br/>';
-// echo $charmeleon->energytype . '<br/>';
-// echo $charmeleon->hitpoints . '<br/>';
-// echo $charmeleon->currentHealth . '<br/>';
-// echo $charmeleon->resistance->Resistance . '<br/>';
-// echo $charmeleon->weakness->Weakness . '<br/>';
+function pokemonBattle($damageC, $energytypeC, $damageP, $energytypeP)
+{
+  echo "hello world";
+}
 
 ?>
 <!DOCTYPE html>
-<html lang="nl" dir="ltr">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>Pokemon</title>
@@ -52,8 +39,6 @@ $charmeleon = new Charmeleon(
           <div id="top1"></div>
         </div>
         <p>Name: <?= $pikachu->name ?><br/>Pokemon: <?= $pikachu->specie ?></p>
-        <button type="button" name="button1"><?= $pikachu->move1->attack ?></button>
-        <button type="button" name="button2"><?= $pikachu->move2->attack ?></button>
       </section>
       <section>
         <img src="img/Charmeleon.jpg" alt="Charmeleon">
@@ -61,9 +46,10 @@ $charmeleon = new Charmeleon(
           <div id="top2"></div>
         </div>
         <p>Name: <?= $charmeleon->name ?><br/>Pokemon: <?= $charmeleon->specie ?></p>
-        <button type="button" name="button3"><?= $charmeleon->move1->attack ?></button>
-        <button type="button" name="button4"><?= $charmeleon->move2->attack ?></button>
       </section>
     </main>
+    <form action="pokemonBattle(<?= $charmeleon->move2->damage ?>, <?= $charmeleon->energytype->type ?>, <?= $pikachu->move2->damage ?>, <?= $pikachu->energytype->type ?>)" method="post">
+      <input type="submit" name="fight" value="FIGHT!">
+    </form>
   </body>
 </html>
