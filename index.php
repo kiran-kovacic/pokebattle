@@ -2,6 +2,7 @@
 
 echo '<link rel="stylesheet" href="style.css">';
 
+// hier worden alle bestanden required.
 require 'Weakness.php';
 require 'Resistance.php';
 require 'Attack.php';
@@ -10,19 +11,27 @@ require 'Pokemon.php';
 require 'Pikachu.php';
 require 'Charmeleon.php';
 
+// hier wordt het object pikachu gemaakt.
 $pikachu = new Pikachu(
   'pika',
   60
 );
 
+// hier wordt het object charmeleon gemaakt.
 $charmeleon = new Charmeleon(
   'melon',
   60
 );
-function pokemonBattle($damageC, $energytypeC, $damageP, $energytypeP)
-{
-  echo "hello world";
-}
+
+// hier wordt de return van de functie damageCalculationC in Charmeleon ge-echo-d.
+echo Charmeleon::damageCalculationC($pikachu->move2->damage, $pikachu->energytype->type,
+  $charmeleon->weakness->name, $charmeleon->weakness->multiplier, $charmeleon->resistance->name,
+  $charmeleon->resistance->reduce, $charmeleon->name, $charmeleon->currentHealth);
+
+// hier wordt de return van de functie damageCalculationP in Pikachu ge-echo-d.
+echo Pikachu::damageCalculationP($charmeleon->move2->damage, $charmeleon->energytype->type,
+  $pikachu->weakness->name, $pikachu->weakness->multiplier, $pikachu->resistance->name,
+  $pikachu->resistance->reduce, $pikachu->name, $pikachu->currentHealth);
 
 ?>
 <!DOCTYPE html>
@@ -48,8 +57,5 @@ function pokemonBattle($damageC, $energytypeC, $damageP, $energytypeP)
         <p>Name: <?= $charmeleon->name ?><br/>Pokemon: <?= $charmeleon->specie ?></p>
       </section>
     </main>
-    <form action="pokemonBattle(<?= $charmeleon->move2->damage ?>, <?= $charmeleon->energytype->type ?>, <?= $pikachu->move2->damage ?>, <?= $pikachu->energytype->type ?>)" method="post">
-      <input type="submit" name="fight" value="FIGHT!">
-    </form>
   </body>
 </html>
