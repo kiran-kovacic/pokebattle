@@ -22,18 +22,19 @@ class Charmeleon extends Pokemon
   }
 
   // in deze functie wordt de damage en de health van charmeleon berekend.
-  public function damageCalculationC($damage, $energytype, $weakness, $multiplier, $resistance, $reduce, $name, $health)
+  public function attack($target, $attack)
   {
-    if ($energytype === $weakness) {
-      $damage = $damage * $multiplier;
+    $damage = $this->$attack->damage;
+    if ($this->fire->type === $target->weakness->name) {
+      $damage = $damage * $target->weakness->multiplier;
     }
-    if ($energytype === $resistance) {
-      $damage = $damage - $reduce;
+    if ($this->fire->type === $target->resistance->name) {
+      $damage = $damage - $target->resistance->reduce;
     }
     if ($damage < 0) {
       $damage = 0;
     }
-    $healthC = $health - $damage;
-    return $name . " get's " . $damage . " damage from electric ring. His current health is now " . $healthC . ".</br>";
+    $health = $target->currentHealth - $damage;
+    return $target->name . " get's " . $damage . " damage from " . $this->$attack->attack . ". His current health is now " . $health . ".</br>";
   }
 }
