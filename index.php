@@ -24,10 +24,10 @@ $charmeleon = new Charmeleon(
 );
 
 // hier wordt de return van de functie damageCalculationC in Charmeleon ge-echo-d.
-echo $charmeleon->attack($pikachu, move2);
+echo $charmeleon->attack($pikachu, 'move2');
 
 // // hier wordt de return van de functie damageCalculationP in Pikachu ge-echo-d.
-echo $pikachu->attack($charmeleon, move2);
+echo $pikachu->attack($charmeleon, 'move2');
 
 ?>
 <!DOCTYPE html>
