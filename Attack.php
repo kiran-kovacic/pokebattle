@@ -3,11 +3,9 @@
 class Moves
 {
     public $attack;
-    public $damage;
 
-    public function __construct($attack, $damage)
+    public function __construct($attack)
     {
         $this->attack = $attack;
-        $this->damage = $damage;
     }
 }
