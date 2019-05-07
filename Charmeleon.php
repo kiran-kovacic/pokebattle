@@ -12,7 +12,7 @@ class Charmeleon extends Pokemon
         2
     );
     $this->resistance = new Resistance(
-        'lighting',
+        'lightning',
         10
     );
     $this->moves = new Moves([['Head Butt', 10],['Flare', 30]]);

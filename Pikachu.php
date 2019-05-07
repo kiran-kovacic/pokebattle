@@ -16,7 +16,7 @@ class Pikachu extends Pokemon
         20
     );
     $this->moves = new Moves([['pika punch', 20],['Electric Ring', 50]]);
-    $this->energytype = new Energytype('lighting');
+    $this->energytype = new Energytype('lightning');
     parent::__construct($name, $this->specie, $this->energytype, $this->hitpoints, $currentHealth, $this->weakness, $this->resistance, $this->moves);
   }
 }
