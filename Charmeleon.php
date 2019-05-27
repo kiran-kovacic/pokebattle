@@ -2,7 +2,7 @@
 
 class Charmeleon extends Pokemon
 {
-  public $specie = 'Charmeleon';
+  private $specie = 'Charmeleon';
   private $hitpoints = 60;
 
   public function __construct($name, $currentHealth)
@@ -12,7 +12,7 @@ class Charmeleon extends Pokemon
         2
     );
     $this->resistance = new Resistance(
-        'lightning',
+        'lighting',
         10
     );
     $this->moves = new Moves([['Head Butt', 10],['Flare', 30]]);

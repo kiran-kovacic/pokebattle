@@ -11,7 +11,7 @@
       // hier worden alle bestanden required.
       require 'Weakness.php';
       require 'Resistance.php';
-      require 'Attack.php';
+      require 'Moves.php';
       require 'Energytype.php';
       require 'Pokemon.php';
       require 'Pikachu.php';
@@ -39,17 +39,11 @@
     <main>
       <section>
         <img src="img/pikachu_big.png" alt="Pikachu">
-        <div class="bottom">
-          <div id="top1"></div>
-        </div>
-        <p>Name: <?= $pikachu->name ?><br/>Pokemon: <?= $pikachu->specie ?></p>
+        <p>Name: <?= $pikachu->getName() ?><br/>Pokemon: <?= $pikachu->getSpecie() ?></p>
       </section>
       <section>
         <img src="img/Charmeleon.jpg" alt="Charmeleon">
-        <div class="bottom">
-          <div id="top2"></div>
-        </div>
-        <p>Name: <?= $charmeleon->name ?><br/>Pokemon: <?= $charmeleon->specie ?></p>
+        <p>Name: <?= $charmeleon->getName() ?><br/>Pokemon: <?= $charmeleon->getSpecie() ?></p>
       </section>
     </main>
   </body>

@@ -2,7 +2,7 @@
 
 class Pokemon
 {
-  public $name;
+  private $name;
   private $specie;
   private $energytype;
   private $hitpoints;
@@ -25,6 +25,16 @@ class Pokemon
     $this->moves = $moves;
   }
 
+  public function getName()
+  {
+    return $this->name;
+  }
+
+  public function getSpecie()
+  {
+    return $this->specie;
+  }
+
   // in deze functie wordt de damage en de health van $target berekend.
   public function attack($target, $attack)
   {
@@ -38,12 +48,13 @@ class Pokemon
     if ($damage < 0) {
       $damage = 0;
     }
-    $this->calculateHealth($damage, $target);
+    $target->calculateHealth($damage);
     return $target->name . " get's " . $damage . " damage from " . $this->moves->attack[$attack][0] . ". His current health is now " . $target->currentHealth . ".</br>";
   }
 
-  private function calculateHealth($damage, $target)
+  // hier wordt currentHealth geupdate van de target.
+  private function calculateHealth($damage)
   {
-    $target->currentHealth -= $damage;
+    $this->currentHealth -= $damage;
   }
 }
