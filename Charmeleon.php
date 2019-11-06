@@ -2,21 +2,20 @@
 
 class Charmeleon extends Pokemon
 {
-  private $specie = 'Charmeleon';
-  private $hitpoints = 60;
-
   public function __construct($name, $currentHealth)
   {
-    $this->weakness = new Weakness(
+    $weakness = new Weakness(
         'water',
         2
     );
-    $this->resistance = new Resistance(
-        'lighting',
+    $resistance = new Resistance(
+        'lightning',
         10
     );
-    $this->moves = new Moves([['Head Butt', 10],['Flare', 30]]);
-    $this->energytype = new Energytype('fire');
-    parent::__construct($name, $this->specie, $this->energytype, $this->hitpoints, $currentHealth, $this->weakness, $this->resistance, $this->moves);
+    $specie = 'Charmeleon';
+    $hitpoints = 60;
+    $moves = [new Moves('Head Butt', 10), new Moves('Flare', 30)];
+    $energytype = new Energytype(energytype::FIRE);
+    parent::__construct($name, $specie, $energytype, $hitpoints, $currentHealth, $weakness, $resistance, $moves);
   }
 }

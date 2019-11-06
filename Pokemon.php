@@ -38,7 +38,7 @@ class Pokemon
   // in deze functie wordt de damage en de health van $target berekend.
   public function attack($target, $attack)
   {
-    $damage = $this->moves->attack[$attack][1];
+    $damage = $this->moves[$attack]->damage;
     if ($this->energytype->type === $target->weakness->name) {
       $damage *= $target->weakness->multiplier;
     }
